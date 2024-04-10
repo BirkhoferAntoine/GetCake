@@ -1,0 +1,41 @@
+import "@fontsource-variable/dancing-script";
+
+
+
+body {
+  background: linear-gradient(135deg, #fdf6f6, var(--peach-fuzz-light), #fcdada, var(--orange-pink-light)) no-repeat;
+  animation: gradient 4s ease infinite;
+}
+body {
+  background: linear-gradient(135deg, #fdf6f6, var(--peach-fuzz-light), #fcdada, var(--orange-pink-light)) no-repeat;
+  animation: gradient 4s ease infinite;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: Dancing Script Variable !important;
+  font-weight: bolder;
+}
+
+.gradient-pattern {
+  animation: gradient 4s ease infinite;
+  background-image: linear-gradient(to bottom, #ff8a00, #e52e71);
+  background-size: 400% 400%;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
+}

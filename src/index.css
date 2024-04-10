@@ -1,0 +1,29 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #FB878E;
+  --rubine-red: #CE0058;
+  --pink: #FB6095;
+  --orange-pink: #FB878E;
+  --orange-pink-light: #fdc2c4;
+  --peach-fuzz: #ffbe98;
+  --peach-fuzz-light: #fde6d9;
+  --orange: #FBAF87;
+  --yellow: #F5E960;
+  --teal: #55D6C2;
+
+  --header-height: 80px;
+}
+
+.background-gradient {
+  background: linear-gradient(135deg, #fdf6f6, var(--peach-fuzz-light), #fcdada, var(--orange-pink-light)) no-repeat;
+}
+
+
