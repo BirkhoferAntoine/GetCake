@@ -36,8 +36,13 @@ export const cartSlice = createSlice({
             state,
             action: PayloadAction<string>
         ) {
-            const itemIndex = state.items.findIndex(item => item.id === action.payload);
-            if (itemIndex <= 0) {
+            //const itemIndex = state.items.findIndex(item => item.id === action.payload);
+            const itemIndex = state.items.findIndex(item => {
+                console.log("=>(cart-slice.ts:42) state", state);
+                console.log("=>(cart-slice.ts:42) item.id, action.payload", item.id, action.payload);
+                return item.id === action.payload;
+            });
+            if (itemIndex >= 0) {
                 if (state.items[itemIndex].quantity > 1) {
                     state.items[itemIndex].quantity--;
                 } else {

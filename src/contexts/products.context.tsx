@@ -32,7 +32,9 @@ export function useProductsContext() {
 }
 const ProductsContextProvider: FC<ProductsContextProviderProps> = ({children}) => {
 
-    const { isLoading, error, data } = useQuery({ queryKey: ['products'], queryFn: fetchProducts });
+    const { isLoading, error, data } = useQuery({
+        queryKey: ['products'], queryFn: fetchProducts
+    });
 
     async function fetchProducts(): Promise<ProductType[] | void> {
         try {

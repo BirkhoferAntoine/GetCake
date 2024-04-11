@@ -6,14 +6,22 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import GradeIcon from '@mui/icons-material/Grade';
 import { Link } from 'react-router-dom';
 import { sxStyles } from './ProductItem.styles.ts';
+import { addToCart } from '../../store/cart-slice.ts';
+import { useDispatch } from 'react-redux';
 
 type ProductItemProps = {
     product: ProductType
 }
 
 
-
 const ProductItem: FC<ProductItemProps> = ({ product }) => {
+
+    const dispatch = useDispatch();
+    function handleAddProductToCart() {
+        dispatch(addToCart({id: product.id, title: product.title, price: product.price}));
+    }
+
+
     return (
         <Card sx={sxStyles.cardContainer} elevation={1}>
             <Link to={'/products/'+product.id}>
@@ -38,7 +46,7 @@ const ProductItem: FC<ProductItemProps> = ({ product }) => {
                     <Box sx={sxStyles.gradeBox}><GradeIcon/>{product.rating}</Box>
                 <CardActions sx={sxStyles.cardContent}>
                     <Button size="small"><FavoriteIcon /></Button>
-                    <Button size="small"><ShoppingCartIcon /></Button>
+                    <Button size="small" onClick={handleAddProductToCart}><ShoppingCartIcon /></Button>
                 </CardActions>
                 </Box>
             </Box>

@@ -2,6 +2,7 @@ import {type FC} from "react";
 import { Menu, MenuItem } from '@mui/material';
 import { useCartDispatch, useCartSelector } from '../../store/hooks.ts';
 import CartItem from '../CartItem/CartItem.tsx';
+import { removeFromCart } from '../../store/cart-slice.ts';
 
 type CartItemsListProps = {
     anchorEl: HTMLElement | null;
@@ -18,6 +19,12 @@ const CartItemsList: FC<CartItemsListProps> = ({anchorEl, onCloseCart}) => {
     const totalPrice = cartItems.reduce(
         (prevValue, item) => prevValue + item.price * item.quantity, 0
     );
+
+
+    function handleDeleteProduct(id: string) {
+        console.log("=>(CartItemsList.tsx:26) id", id);
+        dispatch(removeFromCart(id));
+    }
 
     return (
         <Menu
@@ -36,8 +43,9 @@ const CartItemsList: FC<CartItemsListProps> = ({anchorEl, onCloseCart}) => {
             onClose={onCloseCart}
         >
             {cartItems.map(item => {
-                return (<CartItem product={item} />)
+                return (<CartItem product={item} onDelete={handleDeleteProduct} key={'cart-item-'+item.id}/>)
             })}
+            <MenuItem >Total Price: {totalPrice}€</MenuItem>
             <MenuItem onClick={onCloseCart}>Close</MenuItem>
         </Menu>
     );

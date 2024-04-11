@@ -17,7 +17,9 @@ const ProductsList = () => {
                 error && <Typography>Error while fetching data</Typography> ||
                 data && (
                     <Box sx={sxStyles.productList}>
-                        {data.map(productItem => <ProductItem product={productItem} key={'product-item-' + productItem.id} />)}
+                        {data.map(productItem => {
+                            return <ProductItem product={productItem} key={'product-item-' + productItem.id} />;
+                        })}
                     </Box>)
             }
         </Paper>
