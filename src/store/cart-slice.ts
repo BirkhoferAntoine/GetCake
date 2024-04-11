@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
-type CartItem = {
+export type CartItemType = {
     id: string;
     title: string;
     price: number;
@@ -8,7 +8,7 @@ type CartItem = {
 }
 
 type CartState = {
-    items: CartItem[]
+    items: CartItemType[]
 }
 
 const initialState: CartState = {

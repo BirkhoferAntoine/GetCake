@@ -4,13 +4,8 @@ import { useProductsContext } from '../../contexts/products.context.tsx';
 import { Box, Container, Paper, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-type ProductProps = {};
 
-const sxStyles = {
-
-}
-
-const Product: FC<ProductProps> = ({}) => {
+const Product: FC = () => {
     const params = useParams<{ id: string }>();
     const { isLoading, error, data } = useProductsContext();
     let errorMessage;

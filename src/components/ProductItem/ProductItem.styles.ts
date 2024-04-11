@@ -10,4 +10,17 @@ export const sxStyles = {
         alignItems: 'flex-end',
         justifyContent: 'flex-end',
     },
+    lowerCardBox: {
+        padding:'4px 4px',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent:'space-between',
+        flexGrow: '1',
+        alignItems: 'flex-end'
+    },
+    gradeBox: {
+        margin:'10px',
+        display:'inline-flex',
+        color:'var(--color-primary)'
+    }
 };

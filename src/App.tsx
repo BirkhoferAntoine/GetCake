@@ -8,6 +8,8 @@ import { theme } from './themes/main-theme.ts';
 import { ThemeProvider } from '@mui/material';
 import ProductsContextProvider from './contexts/products.context.tsx';
 import Product from './pages/Product/Product.tsx';
+import { Provider } from 'react-redux';
+import { store } from './store/store.ts';
 
 const Router = createBrowserRouter([
     {
@@ -32,7 +34,9 @@ function App() {
         <QueryClientProvider client={queryClient}>
             <ThemeProvider theme={theme}>
                 <ProductsContextProvider>
-                    <RouterProvider router={Router} />
+                    <Provider store={store}>
+                        <RouterProvider router={Router} />
+                    </Provider>
                 </ProductsContextProvider>
             </ThemeProvider>
         </QueryClientProvider>
