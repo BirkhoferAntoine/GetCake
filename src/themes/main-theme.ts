@@ -3,6 +3,7 @@ import { createTheme } from '@mui/material';
 const colors = {
     colorPrimary: '#FB878E',
     rubineRed: '#CE0058',
+    rubineRedLight: '#FF0270',
     pink: '#FB6095',
     orangePink: '#FB878E',
     orangePinkLight: '#fdc2c4',
@@ -17,7 +18,9 @@ const customShadowColor = {dark: colors.yellow, normal: colors.orangePinkLight, 
 export const theme = createTheme({
     palette: {
         primary: {
-            main: '#FB878E'
+            main: colors.colorPrimary,
+            'highlight': colors.rubineRed,
+            'highlightLight': colors.rubineRedLight
         },
         background: {
             paper: '#fef2e7',

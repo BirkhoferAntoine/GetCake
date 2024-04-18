@@ -11,7 +11,7 @@ const ProductsList = () => {
 
     return (
         <Paper component={'section'} sx={sxStyles.productListContainer} elevation={4}>
-            <Box sx={sxStyles.header}><Typography variant={'h2'}>Our Cakes</Typography></Box>
+            <Box sx={sxStyles.header}><Typography variant={'h2'} color={'primary.main'}>Our Cakes</Typography></Box>
             {
                 isLoading && <Typography>Loading...</Typography> ||
                 error && <Typography>Error while fetching data</Typography> ||

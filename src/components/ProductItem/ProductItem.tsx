@@ -32,7 +32,7 @@ const ProductItem: FC<ProductItemProps> = ({ product }) => {
                     image={product.image}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h5" color={'primary.highlight'} component="div">
                         {product.title}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">

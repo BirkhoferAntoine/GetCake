@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { sxStyles } from './Header.styles.ts';
 import logo from '/src/assets/icons8-cake-64.png';

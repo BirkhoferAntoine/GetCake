@@ -1,4 +1,4 @@
-import { createContext, type FC, ReactNode, useContext, useMemo, useReducer, useState } from 'react';
+import { createContext, type FC, ReactNode, useContext, useMemo} from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axiosService from '../services/axiosService.ts';
 
@@ -13,6 +13,7 @@ export type ProductType = {
     category: string;
     description: string;
     image: string;
+    model: string;
     rating: number;
     ratingCount: number;
 }

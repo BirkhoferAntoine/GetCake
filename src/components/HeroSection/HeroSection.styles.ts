@@ -1,7 +1,6 @@
 import '@fontsource-variable/dancing-script';
 export const sxStyles = {
     headerContainer: {
-        color: 'var(--color-primary)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -9,10 +8,15 @@ export const sxStyles = {
         background: 'transparent',//'rgba(254, 242, 231, 0.5)',
         marginTop: '-88px'
     },
+    typoBox: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        position: 'absolute'
+    },
     headerTypo: {
         fontSize: '5em',
-        position: 'absolute',
-        color:'var(rubian-red)'
+        //position: 'absolute',
     },
     video: {
         height: '100vh',
