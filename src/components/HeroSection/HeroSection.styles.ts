@@ -16,7 +16,6 @@ export const sxStyles = {
     },
     headerTypo: {
         fontSize: '5em',
-        //position: 'absolute',
     },
     video: {
         height: '100vh',
